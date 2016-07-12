@@ -23,7 +23,7 @@ For all the back-end, I suggest you refer to the Open DJ documentation linked ab
 As for the front-end, all you need to do is to install nodejs, and npm, then download this project and run the following commands:
 ```
 $ npm install
-$ gulp
+$ gulp build
 $ npm start
 ```
 Have fun!
