@@ -6,12 +6,20 @@ const tscConfig = typescript.createProject('tsconfig.json');
 const sourcemaps = require('gulp-sourcemaps');
 
 // clean the contents of the distribution directory
-gulp.task('clean', function () {
+gulp.task('clean:all', function () {
   return del('dist/**/*');
 });
 
+gulp.task('clean:styles', function() {
+  return del('dist/styles/*');
+});
+
+gulp.task('clean:js', function() {
+  return del('dist/app/*');
+});
+
 // TypeScript compile
-gulp.task('compile', ['clean'], function () {
+gulp.task('compile', ['clean:js'], function () {
   return tscConfig
     .src('app/**/*.ts')
     .pipe(sourcemaps.init())
@@ -20,7 +28,7 @@ gulp.task('compile', ['clean'], function () {
     .pipe(gulp.dest('dist/app'));
 });
 
-gulp.task('styles', ['clean'], function() {
+gulp.task('styles', ['clean:styles'], function() {
   return gulp
     .src('styles/**/*.styl')
     .pipe(stylus())
@@ -28,11 +36,9 @@ gulp.task('styles', ['clean'], function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('styles/**/*.styl', ['build']);
-  gulp.watch('app/**/*.ts', ['build'])
+  gulp.watch('styles/**/*.styl', ['styles']);
+  gulp.watch('app/**/*.ts', ['compile'])
 });
 
-
-
-gulp.task('build', ['clean', 'compile', 'styles']);
+gulp.task('build', ['compile', 'styles']);
 gulp.task('default', ['build']);
