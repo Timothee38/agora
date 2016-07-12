@@ -1,2 +1,30 @@
-# agora
-This is the website for my band (under construction).
+# Agora's Website
+This is the website for my band "Agora". It will replace the old website on which I used php.
+
+[Old Website](http://agora.yt)
+
+### Upcomming improvements
+- Using an MVC Framework (Angular 2)
+- Using a REST API instead of mysql
+
+### Tools used
+- [Node Js](https://nodejs.org/en/), a tool required for Angular 2.
+- [Angular 2](https://angular.io) for the front-end.
+- [Stylus](http://stylus-lang.com) instead of CSS as it's nice to have imports and such.
+- [Material Design Lite](http://getmdl.io) as the main CSS Framework.
+- [OpenDJ Directory](https://forgerock.org/opendj/doc/bootstrap/server-dev-guide/index.html) for the database and the REST API.
+- [Gulp JS](http://gulpjs.com) to compile the typescript that Angular 2 uses.
+
+### How to test it out?
+You might want to test out or use some features of this project.
+
+For all the back-end, I suggest you refer to the Open DJ documentation linked above.
+
+As for the front-end, all you need to do is to install nodejs, and npm, then download this project and run the following commands:
+```
+$ npm install
+$ npm start
+```
+Have fun!
+
+*Note that all this project is subject to some change. Also I'll keep this open-source as a demonstration purpose. If you find any issue please let me know.*
