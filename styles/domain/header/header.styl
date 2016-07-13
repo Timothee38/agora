@@ -1,2 +1,11 @@
 .agora-layout-transparent
-  background: url('../../images/header.jpg') center / cover
+  background url('../../images/header.jpg') center / cover
+  &.mdl-layout
+    height auto
+
+.agora-header
+  background-color $header-grey
+
+.mdl-layout__header
+  @media screen and (max-width: 1024px)
+    display block !important
