@@ -1,23 +1,26 @@
 <html>
   <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Agora</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/styles/index.css">
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="dist/lib/shim.min.js"></script>
+    <script src="dist/lib/zone.js"></script>
+    <script src="dist/lib/Reflect.js"></script>
+    <script src="dist/lib/system.src.js"></script>
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
       System.import('dist/app').catch(function(err){ console.error(err); });
     </script>
+    <link rel="stylesheet" href="dist/lib/material.min.css">
+    <script src="dist/lib/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <!-- 3. Display the application -->
   <body>
-    <agora>Loading...</agora>
+    <agora>Chargement du site d'agora...</agora>
   </body>
 </html>

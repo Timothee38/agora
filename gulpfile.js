@@ -18,6 +18,10 @@ gulp.task('clean:js', function() {
   return del('dist/app/*');
 });
 
+gulp.task('clean:libs', function() {
+  return del('dist/lib/*');
+});
+
 // TypeScript compile
 gulp.task('compile', ['clean:js'], function () {
   return tscConfig
@@ -35,10 +39,22 @@ gulp.task('styles', ['clean:styles'], function() {
     .pipe(gulp.dest('dist/styles'));
 });
 
+gulp.task('libs', ['clean:libs'], function() {
+  return gulp.src([
+      'node_modules/core-js/client/shim.min.js',
+      'node_modules/zone.js/dist/zone.js',
+      'node_modules/reflect-metadata/Reflect.js',
+      'node_modules/systemjs/dist/system.src.js',
+      'node_modules/material-design-lite/material.min.css',
+      'node_modules/material-design-lite/material.min.js'
+    ])
+    .pipe(gulp.dest('dist/lib'))
+});
+
 gulp.task('watch', function() {
   gulp.watch('styles/**/*.styl', ['styles']);
   gulp.watch('app/**/*.ts', ['compile'])
 });
 
-gulp.task('build', ['compile', 'styles']);
+gulp.task('build', ['compile', 'styles', 'libs']);
 gulp.task('default', ['build']);
