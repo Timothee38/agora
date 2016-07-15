@@ -9,5 +9,4 @@ import { HeaderComponent } from './domain/index';
   directives: [HeaderComponent, ROUTER_DIRECTIVES]
 })
 export class Agora {
-  toto: number = 1;
 }

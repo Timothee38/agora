@@ -4,7 +4,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { MDL } from '../../common/index';
 
 @Component({
-  selector: 'header',
+  selector: 'agora-header',
   directives: [MDL, ROUTER_DIRECTIVES],
   templateUrl: 'app/domain/header/header.html'
 })
