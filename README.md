@@ -1,11 +1,20 @@
 # Agora's Website
 This is the website for my band "Agora". It will replace the old website on which I used php.
 
+![Current Website](https://i.imgur.com/yngdOX4.png)
+
 [Old Website](http://agora.yt)
 
 ### Upcomming improvements
 - Using an MVC Framework (Angular 2)
 - Using a REST API instead of mysql
+
+####Todo:
+- Translations
+- The remaining components
+- Refactor the code
+- Connect the front to the back-end
+- Create an administration interface
 
 ### Tools used
 - [Node Js](https://nodejs.org/en/), a tool required for Angular 2.
