@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { HomeComponent, NewsComponent, DownloadComponent, ConcertsComponent, BioComponent } from './domain/index';
+import { HomeComponent, NewsComponent, DownloadComponent, ConcertsComponent, BioComponent, LicenseComponent } from './domain/index';
 
 const routes : RouterConfig = [
   {
@@ -27,6 +27,10 @@ const routes : RouterConfig = [
   {
     path: 'bio',
     component: BioComponent
+  },
+  {
+    path: 'license',
+    component: LicenseComponent
   }
 ]
 
