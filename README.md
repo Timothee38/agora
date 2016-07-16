@@ -15,6 +15,7 @@ This is the website for my band "Agora". It will replace the old website on whic
 - Refactor the code
 - Connect the front to the back-end
 - Create an administration interface
+- Copy & Paste all HTML to the dist folder (gulp) and change all templateUrls to match the new path.
 
 ### Tools used
 - [Node Js](https://nodejs.org/en/), a tool required for Angular 2.
