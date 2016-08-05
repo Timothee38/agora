@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { HomeComponent, NewsComponent, DownloadComponent, ConcertsComponent, BioComponent, LicenseComponent } from './domain/index';
+import { HomeComponent, NewsComponent, NewsDescription, DownloadComponent, ConcertsComponent, BioComponent, LicenseComponent, NotFoundComponent } from './domain/index';
 
 const routes : RouterConfig = [
   {
@@ -17,6 +17,10 @@ const routes : RouterConfig = [
     component: NewsComponent
   },
   {
+    path: 'news/:id',
+    component: NewsDescription
+  },
+  {
     path: 'downloads',
     component: DownloadComponent
   },
@@ -31,6 +35,14 @@ const routes : RouterConfig = [
   {
     path: 'license',
     component: LicenseComponent
+  },
+  {
+    path: '404',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/404'
   }
 ]
 
